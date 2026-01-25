@@ -193,7 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // ============================================
 // Uncomment the following code if you want a scroll-to-top button
 
-/*
 let scrollToTopBtn = document.createElement('button');
 scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 scrollToTopBtn.className = 'scroll-to-top';
@@ -233,5 +232,4 @@ scrollToTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
-*/
 
