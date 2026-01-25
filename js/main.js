@@ -1,12 +1,16 @@
 AOS.init({
-  duration: 900,
-  once: true
+  duration: 700,
+  easing: "ease-out-cubic",
+  once: true,
+  offset: 80
 });
 
-/* Navbar background change on scroll */
+/* Navbar subtle shadow on scroll */
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".header");
-  header.style.background = window.scrollY > 50 
-    ? "rgba(2,6,23,0.95)" 
-    : "rgba(11,15,25,0.95)";
+  if (window.scrollY > 60) {
+    header.style.boxShadow = "0 4px 20px rgba(15,23,42,0.08)";
+  } else {
+    header.style.boxShadow = "none";
+  }
 });
