@@ -236,30 +236,33 @@ body {
     font-size: var(--font-size-3xl);
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg); /* more space after name */
 }
+
 
 .hero-title {
     font-size: var(--font-size-2xl);
     color: var(--text-secondary);
     font-weight: 400;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg); /* more space after subtitle */
 }
+
 
 .hero-tagline {
     font-size: var(--font-size-lg);
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.8;
+    margin-bottom: 3rem; /* strong separation before buttons */
+    line-height: 1.9;
 }
 
 .hero-buttons {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     justify-content: center;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 3.5rem; /* more space under buttons */
     flex-wrap: wrap;
 }
+
 
 .btn {
     display: inline-flex;
@@ -923,3 +926,147 @@ section {
     }
 }
 
+/* ========= EXPERTISE – SOFT HIGHLIGHT LIST ========= */
+
+#expertise {
+  padding: 90px 0;
+}
+
+.expertise-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.expertise-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.expertise-list li {
+  position: relative;
+  padding: 12px 14px 12px 44px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-radius: 8px;
+  background: linear-gradient(to right, rgba(37,99,235,0.08), rgba(37,99,235,0.02));
+  transition: 0.3s ease;
+}
+
+.expertise-list li::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.expertise-list li:hover {
+  transform: translateX(6px);
+  background: linear-gradient(to right, rgba(37,99,235,0.14), rgba(37,99,235,0.03));
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .expertise-list {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================= HERO : TEXT ONLY ================= */
+
+.hero-text {
+  padding: 120px 0 80px;
+  background: none;
+}
+
+.hero-text-content {
+  max-width: 900px;
+}
+
+.hero-title-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.hero-title-text span {
+  color: var(--primary-color);
+}
+
+.hero-subtitle-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
+.hero-desc-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 720px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-title-text {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle-text {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Space between hero paragraph and buttons */
+.hero-desc-text {
+  margin-bottom: 60px !important;
+}
+
+/* ================= CLEAN SKILLS SECTION ================= */
+
+.skills-clean {
+  padding: 100px 0;
+}
+
+.skills-group {
+  margin-top: 50px;
+}
+
+.skills-group h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.skills-list span {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  background: rgba(0, 0, 0, 0.03);
+  transition: 0.3s ease;
+}
+
+.skills-list span:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
