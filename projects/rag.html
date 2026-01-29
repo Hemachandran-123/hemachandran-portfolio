@@ -1,0 +1,34 @@
+<h1>AI Document Intelligence System — Retrieval-Augmented Generation (RAG)</h1>
+
+<p>
+This project is a production-style Retrieval-Augmented Generation (RAG) system that transforms static documents into an interactive, AI-powered knowledge experience. The application allows users to upload PDF, DOCX, or TXT files and ask natural-language questions about their contents through a chat interface.
+</p>
+
+<h2>Problem</h2>
+<p>
+Large language models often hallucinate or rely on outdated internal knowledge. This project addresses that limitation by grounding all responses strictly in user-provided documents, ensuring traceable and verifiable outputs.
+</p>
+
+<h2>System Design</h2>
+<p>
+The system implements a complete modern RAG pipeline, including document ingestion, sentence-aware semantic chunking, dense embedding generation, persistent vector storage, multi-query retrieval, and controlled answer generation.
+</p>
+
+<h2>How It Works</h2>
+<ul>
+  <li>Document upload (PDF, DOCX, TXT)</li>
+  <li>Preprocessing and semantic chunking</li>
+  <li>Embedding generation and vector indexing</li>
+  <li>Similarity-based retrieval</li>
+  <li>Context-constrained LLM response generation</li>
+</ul>
+
+<h2>Impact</h2>
+<p>
+This architecture significantly reduces hallucinations and ensures responses remain grounded in retrieved knowledge, supporting scalable document Q&A, enterprise knowledge assistance, and research-oriented analysis.
+</p>
+
+<h2>Tech Stack</h2>
+<p>
+Python, NLP, Vector Database, Embedding Models, Large Language Models, Retrieval Systems
+</p>
